@@ -13,6 +13,9 @@ module.exports = {
         sm: "0.75rem",
         s: "1rem",
       },
+      fontFamily: {
+        poem: ["Shadows Into Light", "Arial", "sans-serif"],
+      },
     },
   },
   plugins: [],
