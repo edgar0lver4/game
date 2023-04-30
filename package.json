@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "npx lint-staged",
-    "prepare": "husky install",
     "prettier-run": "npx prettier -c **/src/**",
     "prettier-run:fix": "npx prettier -w **/src/**"
   },
