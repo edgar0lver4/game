@@ -26,6 +26,7 @@
   content: " ";
   width: 100%;
   transition: height 1s;
+  z-index: 10;
 }
 
 .courtain {
@@ -35,11 +36,13 @@
   transition: height 1s;
   background-color: black;
   opacity: 0.4;
+  z-index: 11;
 }
 
 .phrase {
   position: relative;
   width: 100%;
+  z-index: 12;
 }
 
 .poem {
@@ -234,4 +237,23 @@
   );
   background-size: 300% 300%;
   animation: color-form 9s infinite;
+}
+
+.icon {
+  z-index: 2;
+}
+
+/*Emojis animation*/
+@keyframes fear-animation {
+  0% {
+    font-size: 16px;
+  }
+  100% {
+    font-size: 20px;
+  }
+}
+.emoji-animate-fear {
+  font-size: 16px;
+  transform: rotate(90deg) perspective(0);
+  animation: fear-animation 1.5s infinite;
 }
