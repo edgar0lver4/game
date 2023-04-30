@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -28,12 +29,32 @@
 }
 
 .courtain {
-  position: relative;
+  position: absolute;
   content: " ";
   width: 100%;
   transition: height 1s;
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.4;
+}
+
+.phrase {
+  position: relative;
+  width: 100%;
+}
+
+.poem {
+  color: white;
+  font-style: italic;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.authors {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  margin-top: 1rem;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .btn {
@@ -163,4 +184,40 @@
   -webkit-text-fill-color: white;
   -moz-background-clip: border-box;
   -moz-text-fill-color: white;
+}
+
+/*Transitions of text*/
+
+@keyframes first-principal-text {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.first-text {
+  opacity: 0;
+  animation: first-principal-text 6s 1;
+}
+
+@keyframes first-poem-text {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.poem-text {
+  opacity: 1;
+  animation: first-poem-text 1.5s 1;
 }
