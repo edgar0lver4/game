@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import { FaCalendarAlt, FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
 
 const Home = () => {
+  const TIME_OUT_ANIMATION: number = 4000;
   const [isAnimationFinish, setIsAnimationFinish] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsAnimationFinish(true);
-    }, 4000);
+    }, TIME_OUT_ANIMATION);
     return () => clearTimeout(timer);
   }, []);
 
@@ -52,12 +53,12 @@ const Home = () => {
       {isAnimationFinish ? (
         <>
           <div className='w-full flex flex-row py-2 px-2 items-center justify-center banner-date'>
-            <FaCalendarAlt className='mr-8 scale-150' />
+            <FaCalendarAlt className='mr-8 scale-150 icon' />
             <div className='font-alkatra'>
               <p className='text-center'>Fecha del evento</p>
               <p>17 de Marzo del 2024</p>
             </div>
-            <FaRegClock className='mx-8 scale-150' />
+            <FaRegClock className='mx-8 scale-150 icon' />
             <div className='font-alkatra'>
               <p className='text-center'>Hora del evento</p>
               <p>16:00 a 22:00</p>

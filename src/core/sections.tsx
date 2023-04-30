@@ -21,12 +21,12 @@ const Sections = ({ onClickConfirm, onClickPlay }: Props) => {
       </div>
       <div className='basis-1/2 flex flex-col mt-8 md:mt-0 justify-center items-center px-8'>
         <p className='text-center'>
-          ¡O no! 😨 el novio es muy despistado y se a perdido antes de llegar al
-          altar de la boda
+          ¡Oh no! &#128552; El novio es muy despistado y se a perdido antes de
+          llegar al altar de la boda
           <br />
           <b>
-            😱 ¡Ayudalo a regresar antes de que la novia recapacite su decisión!
-            😱
+            &#128561; ¡Ayudalo a regresar antes de que la novia recapacite su
+            decisión! &#128561;
           </b>
         </p>
         <Button className='btn-game mt-8' onClick={onClickPlay}>
