@@ -1,14 +1,8 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": ["plugin:react/recommended", "standard-with-typescript"],
-  "overrides": [],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
+  "extends": ["next", "prettier"],
   "plugins": ["react"],
-  "rules": {}
+  "rules": {
+    "no-unused-vars": "error",
+    "react/no-unescaped-entities": 0
+  }
 }
