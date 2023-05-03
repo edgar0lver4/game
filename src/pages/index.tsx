@@ -1,3 +1,4 @@
+import GuestForm from "@/core/guestForm";
 import Sections from "@/core/sections";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -6,6 +7,9 @@ import { FaCalendarAlt, FaMapMarkedAlt, FaRegClock } from "react-icons/fa";
 const Home = () => {
   const TIME_OUT_ANIMATION: number = 4000;
   const [isAnimationFinish, setIsAnimationFinish] = useState(false);
+  const [showGuestForm, setShowGuestForm] = useState(false);
+
+  const toggleShowGuestForm = () => setShowGuestForm(!showGuestForm);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -64,7 +68,7 @@ const Home = () => {
               <p>16:00 a 22:00</p>
             </div>
           </div>
-          <Sections />
+          <Sections onClickConfirm={toggleShowGuestForm} />
           <div className='py-4 banner-date'>
             <div className='flex flex-row justify-center items-center font-alkatra'>
               <FaMapMarkedAlt className='mr-4 scale-150' />
@@ -77,6 +81,7 @@ const Home = () => {
           </div>
         </>
       ) : null}
+      {showGuestForm ? <GuestForm handleShow={toggleShowGuestForm} /> : null}
     </>
   );
 };
