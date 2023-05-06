@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Mi boda Edgar y leslie</title>
+        <title>Mi boda Edgar y Leslie</title>
       </Head>
       <div
         className={`image-header ${
