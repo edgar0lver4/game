@@ -308,11 +308,11 @@
 .guest-form-show {
   bottom: 0;
   height: 90%;
-  animation: guest-form 2s linear 1;
+  animation: guest-form 1s linear 1;
 }
 
 .guest-form-fading {
   height: 0;
   bottom: -100px;
-  animation: guest-form-fading 2s linear 1;
+  animation: guest-form-fading 1s linear 1;
 }
